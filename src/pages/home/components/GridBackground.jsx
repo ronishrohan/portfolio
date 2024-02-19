@@ -4,8 +4,8 @@ import { useState } from "react";
 import {useScroll, useSpring, useTransform, motion} from "framer-motion"
 function GridBackground({mainRef}) {
   const [size, setSize] = useState(window.innerWidth / 30);
-  const scroll = useScroll({target: mainRef, offset: ["1 0", "1 1"]})
-  const scrollProgress = useSpring(useTransform(scroll.scrollYProgress, [0,1], [-100,100]), {damping:50, stiffness:500})
+  const scroll = useScroll()
+  const scrollProgress = useSpring(useTransform(scroll.scrollYProgress, [0,1], [100,-100]), {damping:50, stiffness:500})
   
   useEffect(() => {
     function changeSize() {
