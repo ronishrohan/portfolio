@@ -10,6 +10,7 @@ function Home() {
 
       <Intro></Intro>
       <About></About>
+      
     </main>
   );
 }
