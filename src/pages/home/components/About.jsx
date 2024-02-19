@@ -24,6 +24,7 @@ function About() {
           >
             ABOUT ME
           </motion.h1>
+          <h2>Hi, I'm Ronish Rohan</h2>
         </div>
         <motion.div style={{x: translateImage}} className="w-[40%] h-full border-2 border-[#e64136]">
           <img className="h-full w-full object-cover brightness-75" src="/images/about-me.webp" alt="" />
