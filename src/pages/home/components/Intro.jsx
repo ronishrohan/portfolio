@@ -28,7 +28,7 @@ function Intro() {
                 key={index}
                 className={`${
                   index != 0 ? "absolute" : "relative"
-                } text-[#ff553b] text-[100px] leading-[80px]`}
+                } text-orange_main text-[100px] leading-[80px]`}
               >
                 <motion.span
                   style={{
@@ -59,7 +59,7 @@ function Intro() {
           })}
         </div>
 
-        <div className="text-lg text-[#ff523b]">{"[scroll]"}</div>
+        <div className="text-lg mt-10 text-orange_main">{"[scroll]"}</div>
       </motion.section>
     </>
   );

@@ -1,6 +1,7 @@
 import React from "react";
 import { useRef } from "react";
 import { motion, useSpring, useTransform, useScroll } from "framer-motion";
+import AboutLink from "./AboutLink";
 
 function About() {
   const sectionRef = useRef();
@@ -8,7 +9,7 @@ function About() {
     target: sectionRef,
     offset: ["0 1", "0.75 1"],
   });
-  
+
   const translateTitle = useSpring(
     useTransform(scrollYProgress, [0, 1], [-400, 0]),
     { damping: 100, stiffness: 500 }
@@ -23,9 +24,9 @@ function About() {
   );
   const scroll2 = useScroll({
     target: sectionRef,
-    offset: ["0 1", "1 0"]
-  })
-  const slideImage=  useTransform(scroll2.scrollYProgress, [0,1], [-100, 100]);
+    offset: ["0 1", "1 0"],
+  });
+  const slideImage = useTransform(scroll2.scrollYProgress, [0, 1], [-100, 100]);
 
   return (
     <section
@@ -36,30 +37,31 @@ function About() {
         <div className="w-[60%] text-[24px] flex flex-col gap-3">
           <motion.h1
             style={{ x: translateTitle }}
-            className="animate-[] text-[70px] text-orange_main "
+            className="text-[70px] text-orange_main "
           >
             ABOUT ME
           </motion.h1>
-          <h2 className="text-orange_dim overflow-hidden leading-[24px]">
+          <h1 className="text-orange_dim overflow-hidden leading-[24px]">
             <motion.div style={{ y: translateWords }}>
               Hi, I'm Ronish Rohan
             </motion.div>
-          </h2>
-          <h1 className="text-orange_dim overflow-hidden leading-[18px] text-[18px]">
-            <motion.div style={{ y: translateWords }}>
-              i make websites
-            </motion.div>
-            <motion.div style={{ y: translateWords }}>
-              [most of them work]
-            </motion.div>
           </h1>
+          <h2 className="text-orange_dim overflow-hidden leading-[18px] flex flex-col gap-3 text-[18px]">
+            <motion.div style={{ y: translateWords }}>
+              i make <AboutLink link="https://github.com/ronishrohan" >websites</AboutLink>  [most of them work]
+            </motion.div>
+            <motion.div style={{ y: translateWords }}>
+              also a <AboutLink link="https://www.instagram.com/ronish.rohan/">3d artist</AboutLink> and{" "}
+              <AboutLink link="https://www.fiverr.com/ronishrohan" >freelancer</AboutLink>
+            </motion.div>
+          </h2>
         </div>
         <motion.div
-          style={{ x: translateImage }}
-          className="relative w-[40%] h-full border-2 border-[#e64136] flex items-center justify-center overflow-hidden"
+          style={{ y: translateImage }}
+          className="relative w-[40%] h-full border-2 border-orange_main flex items-center justify-center overflow-hidden"
         >
           <motion.img
-            style={{y:slideImage}}
+            style={{ y: slideImage }}
             className="absolute w-[200vw] h-[200vh] object-cover brightness-75"
             src="/images/about-me.webp"
             alt=""
