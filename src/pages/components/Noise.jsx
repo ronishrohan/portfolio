@@ -13,11 +13,12 @@ function Noise() {
         <feTurbulence
           type="fractalNoise"
           baseFrequency="0.5"
-          numOctaves="1"
+          numOctaves="5"
           stitchTiles="stitch"
           seed={seed}
         ></feTurbulence>
       </filter>
+      
       <rect className="w-full h-full" filter="url(#noise)" ></rect>
     </svg>
   );

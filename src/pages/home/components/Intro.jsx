@@ -17,7 +17,7 @@ function Intro() {
       <Grid style={{scale: gridProgress}}></Grid>
       <motion.section
         style={{ opacity: scrollProgress }}
-        className="relative w-full h-screen flex flex-col items-center justify-center"
+        className="relative w-full h-screen flex flex-col z-20 items-center justify-center"
         ref={sectionRef}
       >
         <div className="absolute w-[50%] h-[50%] bg-[#fb4b38b0] blur-[250px] bottom-[-60%]"></div>
@@ -59,7 +59,7 @@ function Intro() {
           })}
         </div>
 
-        <div className="text-lg text-[#ff523b]">{"[scroll to reveal]"}</div>
+        <div className="text-lg text-[#ff523b]">{"[scroll]"}</div>
       </motion.section>
     </>
   );

@@ -8,7 +8,9 @@ export default {
     extend: {
       colors: {
         "orange_main" : "#e64136",
-        "orange_dim" : "#e64136"
+        "orange_dim" : "#e64136",
+        "orange_grid" : "hsla(11.76, 100%, 50%, 0.1)",
+        "background" : "rgb(3, 7, 19)"
       }
     },
   },
