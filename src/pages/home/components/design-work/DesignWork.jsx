@@ -6,7 +6,7 @@ import Title from "../Title";
 
 function DesignWork() {
   const sectionRef = useRef(null);
-  const scroll = useScroll({ target: sectionRef, offset: ["0 1", "1 1"] });
+  const scroll = useScroll({ target: sectionRef, offset: ["0 1", "0.75 1"] });
   const scrollOut = useScroll({
     target: sectionRef,
     offset: ["0.25 0", "1 0"],
@@ -15,7 +15,7 @@ function DesignWork() {
   const slideImagesLeft = useTransform(springOut, [0, 1], ["-150%", "0%"]);
   const slideImagesRight = useTransform(springOut, [0, 1], ["150%", "0%"]);
   return (
-    <section id="designwork" ref={sectionRef} className="h-screen w-full z-20">
+    <section id="designwork" ref={sectionRef} className="min-h-screen w-full z-20">
       <Title
         link="https://www.instagram.com/ronish.rohan/"
         title="My art account"

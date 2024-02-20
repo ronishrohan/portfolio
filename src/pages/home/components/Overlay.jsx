@@ -21,6 +21,7 @@ function Overlay({ ...others }) {
             <Link link="#about" >About</Link>
             <Link link="#work" >My work</Link>
             <Link link="#designwork" >3d work</Link>
+            <Link link="#contact" >Contact</Link>
           </div>
         </nav>
       </div>

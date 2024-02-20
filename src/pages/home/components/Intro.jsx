@@ -3,6 +3,7 @@ import { motion, useScroll, useTransform, useSpring } from "framer-motion";
 import { useRef } from "react";
 import { useEffect } from "react";
 import Overlay from "./Overlay";
+import { icons } from "../../../util/icons";
 
 function Intro() {
   const sectionRef = useRef(null);
@@ -11,10 +12,13 @@ function Intro() {
     offset: ["0 0", "0.5 0"],
   });
   const scrollProgress = useTransform(scrollYProgress, [0, 1], [1, 0]);
-  const gridProgress = useSpring(useTransform(scrollYProgress, [0,1], [1,1.3]), {damping: 20})
+  const gridProgress = useSpring(
+    useTransform(scrollYProgress, [0, 1], [1, 1.3]),
+    { damping: 20 }
+  );
   return (
     <>
-      <Overlay style={{scale: gridProgress}}></Overlay>
+      <Overlay style={{ scale: gridProgress }}></Overlay>
       <motion.section
         style={{ opacity: scrollProgress }}
         className="relative w-full h-screen flex flex-col z-20 items-center justify-center"
@@ -40,7 +44,6 @@ function Intro() {
                   }}
                   animate={{
                     fontWeight: 900,
-                    
                   }}
                   transition={{
                     duration: 1.5,
@@ -59,7 +62,10 @@ function Intro() {
           })}
         </div>
 
-        <div className="text-lg mt-10 text-orange_main">{"[scroll]"}</div>
+        <span className="text-[35px] absolute bottom-20 flex flex-col items-center justify-center ">
+          <div className="text-lg mt- text-orange_main">{"[scroll]"}</div>
+          <div>{icons.arrowDown}</div>
+        </span>
       </motion.section>
     </>
   );

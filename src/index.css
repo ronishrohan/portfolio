@@ -24,6 +24,12 @@ body{
   
 }
 
+footer{
+  position: relative;
+  overflow: hidden;
+  padding: 5rem;
+}
+
 section{
   position: relative;
   overflow: hidden;

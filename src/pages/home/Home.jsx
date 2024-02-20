@@ -5,7 +5,10 @@ import About from "./components/About";
 import GridBackground from "./components/GridBackground";
 import WebsitesWork from "./components/work/WebsitesWork";
 import DesignWork from "./components/design-work/DesignWork";
+import Footer from "./components/footer/Footer";
+
 import { useRef } from "react";
+
 function Home() {
   const mainRef = useRef(null);
   return (
@@ -19,6 +22,7 @@ function Home() {
         <About></About>
         <WebsitesWork></WebsitesWork>
         <DesignWork></DesignWork>
+        <Footer></Footer>
       </div>
     </main>
   );

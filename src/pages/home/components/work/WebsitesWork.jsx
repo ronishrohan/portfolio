@@ -5,7 +5,7 @@ import { useRef } from "react";
 import Title from "../Title";
 function WebsitesWork() {
   const sectionRef = useRef(null);
-  const scroll = useScroll({ target: sectionRef, offset: ["0 1", "1 1"] });
+  const scroll = useScroll({ target: sectionRef, offset: ["0 1", "0.75 1"] });
   const scrollOut = useScroll({
     target: sectionRef,
     offset: ["0.25 0", "1 0"],
