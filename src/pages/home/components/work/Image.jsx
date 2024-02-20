@@ -10,7 +10,7 @@ import { icons } from "../../../../util/icons";
 
 function Image({ src, link, title, scroll }) {
   const opacity = useSpring(
-    useTransform(scroll.scrollYProgress, [0, 1], [1, 0.5]),
+    useTransform(scroll.scrollYProgress, [0, 1], [1, 0.8]),
     { damping: 50, stiffness: 200 }
   );
   const [hovered, setHovered] = useState(false);

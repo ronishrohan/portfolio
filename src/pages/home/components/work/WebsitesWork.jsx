@@ -7,9 +7,9 @@ function WebsitesWork() {
   const sectionRef = useRef(null);
   const scroll = useScroll({ target: sectionRef, offset: ["0 1", "1 1"] });
   const scrollOut = useScroll({target: sectionRef, offset: ["0.25 0", "1 0"]})
-  const springOut = useSpring(scrollOut.scrollYProgress, {damping: 25})
-  const slideImagesLeft = useTransform(springOut, [0,1], ["0%", "-150%"])
-  const slideImagesRight = useTransform(springOut, [0,1], ["0%", "150%"])
+  const springOut = useSpring(scroll.scrollYProgress, {damping: 25})
+  const slideImagesLeft = useTransform(springOut, [0,1], ["-150%", "0%"])
+  const slideImagesRight = useTransform(springOut, [0,1], ["150%", "0%"])
   return (
     <section
       ref={sectionRef}
@@ -18,7 +18,7 @@ function WebsitesWork() {
       <Title link="https://github.com/ronishrohan" title="My github" >WORK</Title>
       <motion.div className="flex">
         <div className="h-full flex flex-col gap-8 ">
-          <motion.div style={{x: slideImagesRight}} className="flex gap-8">
+          <motion.div style={{x: slideImagesLeft}} className="flex gap-8">
             <Image
               scroll={scrollOut}
               src="https://cdn.discordapp.com/attachments/976406861014257724/1209228174035259495/image.png?ex=65e6287f&is=65d3b37f&hm=680f7c81f213506e449d0a9cde2e5f22b0cb0a97725e3f85c9e28c5e5b8df248&"
@@ -44,7 +44,7 @@ function WebsitesWork() {
               title="reddit clone made with react"
             ></Image>
           </motion.div>
-          <motion.div style={{x:slideImagesLeft}} className="flex gap-8">
+          <motion.div style={{x:slideImagesRight}} className="flex gap-8">
             <Image
               scroll={scrollOut}
               src="https://cdn.discordapp.com/attachments/976406861014257724/1209229003987230811/image.png?ex=65e62944&is=65d3b444&hm=4b7f8198bbfcf0a8f0d3b8e1d3fe8290cb14ebe0ed1d7dd2090473ccce273a4e&"

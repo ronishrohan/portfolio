@@ -2,7 +2,7 @@ import React from "react";
 import { motion, useScroll, useTransform, useSpring } from "framer-motion";
 import { useRef } from "react";
 import { useEffect } from "react";
-import Grid from "./Grid";
+import Overlay from "./Overlay";
 
 function Intro() {
   const sectionRef = useRef(null);
@@ -14,7 +14,7 @@ function Intro() {
   const gridProgress = useSpring(useTransform(scrollYProgress, [0,1], [1,1.3]), {damping: 20})
   return (
     <>
-      <Grid style={{scale: gridProgress}}></Grid>
+      <Overlay style={{scale: gridProgress}}></Overlay>
       <motion.section
         style={{ opacity: scrollProgress }}
         className="relative w-full h-screen flex flex-col z-20 items-center justify-center"

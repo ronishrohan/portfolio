@@ -5,27 +5,26 @@ import { icons } from "../../../util/icons";
 function Title({ children, link, title }) {
   return (
     <motion.h1
-      initial={{ fontWeight: 100, x: "-100%" }}
-      whileInView={{ fontWeight: 900, x: "0%" }}
+      initial={{ fontWeight: 100, x: -100 }}
+      whileInView={{ fontWeight: 950, x: 0 }}
+      whileHover={{fontWeight: 500, transition: {delay: 0}}}
       transition={{
-        delay: 0.05,
         duration: 1.5,
         type: "spring",
-        stiffness: 500,
-        damping: 90,
+        damping: 20,
       }}
-      className="text-[70px] text-orange_main flex items-baseline"
+      className="text-[70px] text-orange_main flex items-baseline w-fit"
     >
       {link ? (
         <>
-          <a href={link} title={title} className="hover:underline hover:text-orange_hover flex">
+          <a href={link} title={title} className="hover:underline hover:text-orange_hover flex items-start">
             <span>{children}</span>
-            <span className="text-[30px] mb-auto">{icons.link2}</span>
+            <span className="text-[30px] ">{icons.link2}</span>
           </a>
         </>
       ) : (
         <>
-          <span>{children}</span>
+          <span className="pointer-events-none">{children}</span>
         </>
       )}
     </motion.h1>

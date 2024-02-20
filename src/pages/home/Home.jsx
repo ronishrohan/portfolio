@@ -1,6 +1,6 @@
 import React from "react";
 import Intro from "./components/Intro";
-import Grid from "./components/Grid";
+
 import About from "./components/About";
 import GridBackground from "./components/GridBackground";
 import WebsitesWork from "./components/work/WebsitesWork";
