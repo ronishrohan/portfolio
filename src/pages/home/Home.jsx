@@ -14,6 +14,7 @@ function Home() {
       <Intro></Intro>
       <About></About>
       <WebsitesWork></WebsitesWork>
+      <About></About>
       
     </main>
   );

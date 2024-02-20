@@ -1,21 +1,22 @@
 import React from "react";
 import { useState } from "react";
 import { motion, AnimatePresence, useTransform } from "framer-motion";
+import { icons } from "../../../../util/icons";
 
 function Image({ src, link, title, scroll }) {
   const width = useTransform(scroll.scrollYProgress, [0, 1], [0, 400]);
   const [hovered, setHovered] = useState(false);
   return (
-    <motion.div>
+    <motion.div style={{clipPath: "polygon(0% 0%, 100% 0%, 100% 100%, 0% 100%)"}}>
       <motion.a
         onMouseEnter={() => setHovered(true)}
         onMouseLeave={() => setHovered(false)}
-        className="relative w-full h-[200px] overflow-hidden flex items-center justify-between bg-black outline outline-1 outline-orange_main hover:outline-orange-50"
+        className="relative w-full h-full overflow-hidden  flex items-center justify-between bg-black outline outline-4 outline-orange_main hover:outline-orange_hover transition-all"
         href={link}
       >
         <motion.img
           src={src}
-          className="object-cover w-full h-full "
+          className="object-cover w-[25vw] h-full "
           alt="image"
         />
         <AnimatePresence>
@@ -41,8 +42,10 @@ function Image({ src, link, title, scroll }) {
                     damping: 40,
                     delay: 0.05,
                   }}
+                  className="flex justify-between"
                 >
-                  {title}
+                  <span>{title}</span>
+                  <span>{icons.link}</span>
                 </motion.div>
               </motion.div>
             </>

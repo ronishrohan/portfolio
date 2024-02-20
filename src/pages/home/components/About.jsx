@@ -37,7 +37,7 @@ function About() {
         <div className="w-[60%] text-[24px] flex flex-col gap-3">
           <motion.h1
             style={{ x: translateTitle }}
-            className="text-[70px] text-orange_main "
+            className="text-[70px] text-orange_main font-black "
           >
             ABOUT ME
           </motion.h1>
@@ -47,10 +47,10 @@ function About() {
             </motion.div>
           </h1>
           <h2 className="text-orange_dim overflow-hidden leading-[18px] flex flex-col gap-3 text-[18px]">
-            <motion.div style={{ y: translateWords }}>
-              i make <AboutLink link="https://github.com/ronishrohan" >websites</AboutLink>  [most of them work]
+            <motion.div style={{ y: translateWords }} className="flex">
+              i make<AboutLink link="https://github.com/ronishrohan" >websites</AboutLink>  [most of them work]
             </motion.div>
-            <motion.div style={{ y: translateWords }}>
+            <motion.div style={{ y: translateWords }} className="flex">
               also a <AboutLink link="https://www.instagram.com/ronish.rohan/">3d artist</AboutLink> and{" "}
               <AboutLink link="https://www.fiverr.com/ronishrohan" >freelancer</AboutLink>
             </motion.div>
@@ -58,7 +58,7 @@ function About() {
         </div>
         <motion.div
           style={{ y: translateImage }}
-          className="relative w-[40%] h-full border-2 border-orange_main flex items-center justify-center overflow-hidden"
+          className="relative w-[40%] h-full border-4 border-orange_main flex items-center justify-center overflow-hidden"
         >
           <motion.img
             style={{ y: slideImage }}

@@ -20,7 +20,7 @@ function Intro() {
         className="relative w-full h-screen flex flex-col z-20 items-center justify-center"
         ref={sectionRef}
       >
-        <div className="absolute w-[50%] h-[50%] bg-[#fb4b38b0] blur-[250px] bottom-[-60%]"></div>
+        {/* <div className="absolute w-[50%] h-[50%] blur-[250px] bottom-[-60%]"></div> */}
         <div className="w-full flex items-center justify-center relative">
           {new Array(3).fill(null).map((_, index) => {
             return (
@@ -32,15 +32,15 @@ function Intro() {
               >
                 <motion.span
                   style={{
-                    WebkitTextStroke: "1px #ff553bbc",
+                    WebkitTextStroke: "1px black",
                   }}
                   initial={{
                     fontWeight: 100,
-                    color: index == 0 ? "#f32707b5" : "transparent",
+                    color: index == 0 ? "black" : "transparent",
                   }}
                   animate={{
                     fontWeight: 900,
-                    color: index == 2 ? "#f32707b5" : "transparent",
+                    
                   }}
                   transition={{
                     duration: 1.5,
