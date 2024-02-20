@@ -2,6 +2,7 @@ import React from "react";
 import Image from "../work/Image";
 import { useScroll, useTransform, motion, useSpring } from "framer-motion";
 import { useRef } from "react";
+import Title from "../Title";
 
 
 function DesignWork() {
@@ -9,7 +10,7 @@ function DesignWork() {
     const scrollOut = useScroll({target: sectionRef, offset: ["0.25 0", "1 0"]})
   return (
     <section ref={sectionRef} className="h-screen w-full z-20">
-      <h1 className="text-[70px] text-orange_main font-black">3D WORK</h1>
+      <Title link="https://www.instagram.com/ronish.rohan/" title="My art account" >3D WORK</Title>
       <div className="flex flex-col gap-8">
         <div className="flex gap-8" >
             <Image scroll={scrollOut} link="https://blenderartists.org/t/andys-room-from-toy-story-3/1351270" src="https://blenderartists.org/uploads/default/optimized/4X/5/b/5/5b56f236bc9d9dae46a2c6c282ca9a83b6cd20bf_2_690x390.jpeg" title="Andys Room"  ></Image>

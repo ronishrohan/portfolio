@@ -2,11 +2,10 @@ import React from "react";
 import Image from "./Image";
 import { useScroll, useTransform, motion, useSpring } from "framer-motion";
 import { useRef } from "react";
-
+import Title from "../Title";
 function WebsitesWork() {
   const sectionRef = useRef(null);
   const scroll = useScroll({ target: sectionRef, offset: ["0 1", "1 1"] });
-  const weightTitle = useTransform(scroll.scrollYProgress, [0, 1], [100, 900]);
   const scrollOut = useScroll({target: sectionRef, offset: ["0.25 0", "1 0"]})
   const springOut = useSpring(scrollOut.scrollYProgress, {damping: 25})
   const slideImagesLeft = useTransform(springOut, [0,1], ["0%", "-150%"])
@@ -16,12 +15,7 @@ function WebsitesWork() {
       ref={sectionRef}
       className="relative h-fit min-h-screen w-full p-20 flex flex-col "
     >
-      <motion.h1
-        style={{ fontWeight: weightTitle }}
-        className="text-[70px] text-orange_main "
-      >
-        WORK
-      </motion.h1>
+      <Title link="https://github.com/ronishrohan" title="My github" >WORK</Title>
       <motion.div className="flex">
         <div className="h-full flex flex-col gap-8 ">
           <motion.div style={{x: slideImagesRight}} className="flex gap-8">

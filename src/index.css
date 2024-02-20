@@ -6,10 +6,10 @@
   font-family: "Neue Graftyne";
   src: url("/fonts/neue-graftyne.woff2");
 }
-
+/* 
 ::-webkit-scrollbar{
   width: 0;
-}
+} */
 
 html,body,#root{
   width: 100%;

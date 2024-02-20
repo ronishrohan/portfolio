@@ -2,6 +2,7 @@ import React from "react";
 import { useRef } from "react";
 import { motion, useSpring, useTransform, useScroll } from "framer-motion";
 import AboutLink from "./AboutLink";
+import Title from "./Title";
 
 function About() {
   const sectionRef = useRef();
@@ -35,12 +36,7 @@ function About() {
     >
       <div className="flex flex-row w-full z-20">
         <div className="w-[60%] text-[24px] flex flex-col gap-3">
-          <motion.h1
-            style={{ x: translateTitle }}
-            className="text-[70px] text-orange_main font-black "
-          >
-            ABOUT ME
-          </motion.h1>
+          <Title>ABOUT ME</Title>
           <h1 className="text-orange_dim overflow-hidden leading-[24px]">
             <motion.div style={{ y: translateWords }}>
               Hi, I'm Ronish Rohan
