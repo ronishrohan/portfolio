@@ -8,7 +8,7 @@ function WebsitesWork() {
   const scroll = useScroll({ target: sectionRef, offset: ["0 1", "1 1"] });
   const weightTitle = useTransform(scroll.scrollYProgress, [0, 1], [100, 900]);
   const scrollOut = useScroll({target: sectionRef, offset: ["0.25 0", "1 0"]})
-  const springOut = useSpring(scrollOut.scrollYProgress, {damping: 20})
+  const springOut = useSpring(scrollOut.scrollYProgress, {damping: 25})
   const slideImagesLeft = useTransform(springOut, [0,1], ["0%", "-150%"])
   const slideImagesRight = useTransform(springOut, [0,1], ["0%", "150%"])
   return (

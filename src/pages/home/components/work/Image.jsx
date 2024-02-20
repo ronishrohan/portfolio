@@ -1,17 +1,30 @@
 import React from "react";
 import { useState } from "react";
-import { motion, AnimatePresence, useTransform } from "framer-motion";
+import {
+  motion,
+  AnimatePresence,
+  useTransform,
+  useSpring,
+} from "framer-motion";
 import { icons } from "../../../../util/icons";
 
 function Image({ src, link, title, scroll }) {
-  const width = useTransform(scroll.scrollYProgress, [0, 1], [0, 400]);
+  const opacity = useSpring(
+    useTransform(scroll.scrollYProgress, [0, 1], [1, 0.5]),
+    { damping: 50, stiffness: 200 }
+  );
   const [hovered, setHovered] = useState(false);
   return (
-    <motion.div style={{clipPath: "polygon(0% 0%, 100% 0%, 100% 100%, 0% 100%)"}}>
+    <motion.div
+      style={{ scale: opacity }}
+      initial={{ clipPath: "polygon(0% 100%, 100% 100%, 100% 100%, 0% 100%)" }}
+      whileInView={{ clipPath: "polygon(0% 0%, 100% 0%, 100% 100%, 0% 100%)" }}
+      transition={{ delay: -0.1,type: "spring", damping: 20}}
+    >
       <motion.a
         onMouseEnter={() => setHovered(true)}
         onMouseLeave={() => setHovered(false)}
-        className="relative w-full h-full overflow-hidden  flex items-center justify-between bg-black outline outline-4 outline-orange_main hover:outline-orange_hover transition-all"
+        className="relative w-full h-full overflow-hidden  flex items-center justify-between bg-black border-[4px] border-black hover:border-orange_hover transition-all"
         href={link}
       >
         <motion.img

@@ -61,6 +61,7 @@ function About() {
           className="relative w-[40%] h-full border-4 border-orange_main flex items-center justify-center overflow-hidden"
         >
           <motion.img
+            title="me and my dog :p"
             style={{ y: slideImage }}
             className="absolute w-[200vw] h-[200vh] object-cover brightness-75"
             src="/images/about-me.webp"
