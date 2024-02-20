@@ -1,25 +1,14 @@
-import React from "react";
 import Home from "./pages/home/Home";
-import Lenis from "@studio-freight/lenis";
-import { useEffect } from "react";
+
 import Noise from "./pages/components/Noise";
+import { ReactLenis } from "@studio-freight/react-lenis";
 
 function App() {
-  useEffect(() => {
-    const lenis = new Lenis({ duration: 2 });
-
-    function raf(time) {
-      lenis.raf(time);
-      requestAnimationFrame(raf);
-    }
-
-    requestAnimationFrame(raf);
-  });
   return (
-    <>
+    <ReactLenis root options={{ duration: 2 }}>
       <Noise></Noise>
       <Home></Home>
-    </>
+    </ReactLenis>
   );
 }
 

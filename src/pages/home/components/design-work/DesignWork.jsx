@@ -15,7 +15,7 @@ function DesignWork() {
   const slideImagesLeft = useTransform(springOut, [0, 1], ["-150%", "0%"]);
   const slideImagesRight = useTransform(springOut, [0, 1], ["150%", "0%"]);
   return (
-    <section ref={sectionRef} className="h-screen w-full z-20">
+    <section id="designwork" ref={sectionRef} className="h-screen w-full z-20">
       <Title
         link="https://www.instagram.com/ronish.rohan/"
         title="My art account"

@@ -31,6 +31,7 @@ function About() {
 
   return (
     <section
+      id="about"
       ref={sectionRef}
       className="h-screen w-full overflow-hidden z-20 text-white flex p-20"
     >
@@ -54,7 +55,7 @@ function About() {
         </div>
         <motion.div
           style={{ y: translateImage }}
-          className="relative w-[40%] h-full border-4 border-orange_main flex items-center justify-center overflow-hidden"
+          className="relative w-[40%] h-full border-4 border-orange_hover flex items-center justify-center overflow-hidden"
         >
           <motion.img
             title="me and my dog :p"
