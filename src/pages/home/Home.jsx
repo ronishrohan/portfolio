@@ -3,19 +3,23 @@ import Intro from "./components/Intro";
 import Grid from "./components/Grid";
 import About from "./components/About";
 import GridBackground from "./components/GridBackground";
-import WebsitesWork from "./components/WebsitesWork";
+import WebsitesWork from "./components/work/WebsitesWork";
+import DesignWork from "./components/design-work/DesignWork";
 import { useRef } from "react";
 function Home() {
   const mainRef = useRef(null);
   return (
     <main ref={mainRef} id="main" className=" relative w-full h-full">
       {/* <Grid></Grid> */}
-      <GridBackground mainRef={mainRef} ></GridBackground>
-      <Intro></Intro>
-      <About></About>
-      <WebsitesWork></WebsitesWork>
-      <About></About>
-      
+      <div className="z-0">
+        <GridBackground mainRef={mainRef}></GridBackground>
+      </div>
+      <div className="z-10">
+        <Intro></Intro>
+        <About></About>
+        <WebsitesWork></WebsitesWork>
+        <DesignWork></DesignWork>
+      </div>
     </main>
   );
 }

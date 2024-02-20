@@ -1,5 +1,5 @@
 import React from "react";
-import Image from "./work/Image";
+import Image from "./Image";
 import { useScroll, useTransform, motion, useSpring } from "framer-motion";
 import { useRef } from "react";
 
@@ -14,7 +14,7 @@ function WebsitesWork() {
   return (
     <section
       ref={sectionRef}
-      className="relative h-fit w-full p-20 flex flex-col "
+      className="relative h-fit min-h-screen w-full p-20 flex flex-col "
     >
       <motion.h1
         style={{ fontWeight: weightTitle }}
