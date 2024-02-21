@@ -19,7 +19,7 @@ function Image({ src, link, title, scroll }) {
       style={{ scale: opacity }}
       initial={{ clipPath: "polygon(0% 100%, 100% 100%, 100% 100%, 0% 100%)" }}
       whileInView={{ clipPath: "polygon(0% 0%, 100% 0%, 100% 100%, 0% 100%)" }}
-      transition={{ delay: -0.1,type: "spring", damping: 20}}
+      transition={{ delay: 0,type: "spring", damping: 20}}
       className="max-h-[180px]"
     >
       <motion.a
