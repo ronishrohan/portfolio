@@ -10,7 +10,7 @@ function Back() {
   const [shown, setShown] = useState(false);
   const scroll = useScroll()
   const scrollVelocity = useVelocity(scroll.scrollY);
-  const scrollMove = useSpring(useTransform(scrollVelocity, [-1000,1000], [-10,10]), {damping: 20})
+  const scrollMove = useSpring(useTransform(scrollVelocity, [-1000,1000], [10,-10]), {damping: 20})
   useEffect(() => {
     function handleScroll(e) {
         console.log(window.innerHeight)
