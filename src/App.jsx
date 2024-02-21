@@ -6,7 +6,7 @@ import { ReactLenis } from "@studio-freight/react-lenis";
 function App() {
   return (
     <ReactLenis root options={{ duration: 2 }}>
-      <Noise></Noise>
+      {/* <Noise></Noise> */}
       <Home></Home>
     </ReactLenis>
   );
