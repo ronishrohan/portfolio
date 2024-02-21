@@ -10,7 +10,7 @@ function Link({children, link}) {
         e.preventDefault()
         lenis.scrollTo(link);
       }}
-      className="h-full hover:bg-white hover:text-black flex items-center px-4 outline outline-1 outline-black"
+      className="h-full hover:bg-orange_hover  flex items-center px-4 outline outline-1 outline-black"
       href="about"
     >
       {children}

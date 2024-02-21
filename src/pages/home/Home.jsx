@@ -6,7 +6,7 @@ import GridBackground from "./components/GridBackground";
 import WebsitesWork from "./components/work/WebsitesWork";
 import DesignWork from "./components/design-work/DesignWork";
 import Footer from "./components/footer/Footer";
-
+import Back from "./components/Back";
 import { useRef } from "react";
 
 function Home() {
@@ -18,6 +18,7 @@ function Home() {
         <GridBackground mainRef={mainRef}></GridBackground>
       </div>
       <div className="z-10">
+        <Back></Back>
         <Intro></Intro>
         <About></About>
         <WebsitesWork></WebsitesWork>

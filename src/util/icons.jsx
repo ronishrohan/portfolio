@@ -7,6 +7,7 @@ import { faLink } from '@fortawesome/free-solid-svg-icons'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import {faDiscord, faInstagram, faTwitter} from "@fortawesome/free-brands-svg-icons"
 import { faEnvelope } from '@fortawesome/free-solid-svg-icons'
+import { faArrowTurnUp } from '@fortawesome/free-solid-svg-icons'
 
 
 export const icons = {
@@ -19,5 +20,6 @@ export const icons = {
     discord: <FontAwesomeIcon icon={faDiscord} ></FontAwesomeIcon>,
     instagram: <FontAwesomeIcon icon={faInstagram} ></FontAwesomeIcon>,
     twitter: <FontAwesomeIcon  icon={faTwitter}></FontAwesomeIcon>,
-    email: <FontAwesomeIcon icon={faEnvelope} ></FontAwesomeIcon>
+    email: <FontAwesomeIcon icon={faEnvelope} ></FontAwesomeIcon>,
+    back: <FontAwesomeIcon icon={faArrowTurnUp} ></FontAwesomeIcon>
 }

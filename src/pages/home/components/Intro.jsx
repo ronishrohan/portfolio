@@ -20,6 +20,7 @@ function Intro() {
     <>
       <Overlay style={{ scale: gridProgress }}></Overlay>
       <motion.section
+        id="intro"
         style={{ opacity: scrollProgress }}
         className="relative w-full h-screen flex flex-col z-20 items-center justify-center"
         ref={sectionRef}

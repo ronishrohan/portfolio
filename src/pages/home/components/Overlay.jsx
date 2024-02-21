@@ -15,7 +15,7 @@ function Overlay({ ...others }) {
         <nav className="h-8 bg-black flex justify-between items-center text-center border-b-2 border-b-black  text-white pointer-events-auto">
           <div className="ml-4 mt-[2px] flex gap-2">
             <span className="text-orange_hover">{icons.logo}</span>
-            <span>RONISH ROHAN</span>
+            <span id="name">RONISH ROHAN</span>
           </div>
           <div className="flex text-[14px] h-full">
             <Link link="#about" >About</Link>
