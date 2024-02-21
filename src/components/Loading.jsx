@@ -1,7 +1,15 @@
 import React from "react";
 import { motion, AnimatePresence } from "framer-motion";
+import { useLenis } from "@studio-freight/react-lenis";
+import { useEffect } from "react";
 
 function Loading({ loading }) {
+    const lenis = useLenis();
+    useEffect(() => {
+        if(!loading){
+            lenis.scrollTo("#intro", {immediate: true})
+        }
+    }, [loading])
   return (
     <AnimatePresence>
       {loading && (
