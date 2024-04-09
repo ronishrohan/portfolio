@@ -4,6 +4,7 @@ import { useLenis } from "@studio-freight/react-lenis";
 import { useEffect } from "react";
 
 function Loading({ loading }) {
+
     const lenis = useLenis();
     useEffect(() => {
         if(!loading){
@@ -35,6 +36,7 @@ function Loading({ loading }) {
                 );
               })}
             </span>
+            
           </motion.div>
         </>
       )}

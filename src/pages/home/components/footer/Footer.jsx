@@ -50,7 +50,7 @@ function Footer() {
               whileHover={{ y: "-50%", scale: 1 }}
               transition={{ type: "spring", damping: 50 }}
               className="top-0 w-full h-fit "
-              src="https://cdn.discordapp.com/attachments/976406861014257724/1209755032916860970/IMG_20230428_183208.jpg?ex=65e8132c&is=65d59e2c&hm=e465defb61e9f08ebd06de49584aa30ba39e192e6f3c851b15565efe67028a5c&"
+              src="https://res.cloudinary.com/ddrpwfpcj/image/upload/v1712645199/portfolio/iwy7sjjnp6xlfmme2fkl.jpg"
               alt=""
             />
           </div>

@@ -27,7 +27,7 @@ function DesignWork() {
           <Image
             scroll={scrollOut}
             link="https://blenderartists.org/t/andys-room-from-toy-story-3/1351270"
-            src="https://blenderartists.org/uploads/default/optimized/4X/5/b/5/5b56f236bc9d9dae46a2c6c282ca9a83b6cd20bf_2_690x390.jpeg"
+            src="https://res.cloudinary.com/ddrpwfpcj/image/upload/v1712645336/portfolio/lawesgf6zweysgj8adbq.png"
             title="Andys Room"
           ></Image>
           <Image
@@ -59,19 +59,19 @@ function DesignWork() {
           <Image
             scroll={scrollOut}
             link="https://www.instagram.com/p/CkOEMDTPJY0/"
-            src="https://cdn.discordapp.com/attachments/976406861014257724/1209566296082088018/aaaaaaaaaaaaaa.jpeg?ex=65e76365&is=65d4ee65&hm=5d21b5dacc71462aa527846112cebfd108126193d5583e95c5c15c67fae532b3&"
+            src="https://res.cloudinary.com/ddrpwfpcj/image/upload/v1712645199/portfolio/vvndzzkgynxoswhfsoys.jpg"
             title="table again"
           ></Image>
           <Image
             scroll={scrollOut}
             link="https://www.instagram.com/p/CbuZkZEsYu1/"
-            src="https://cdn.discordapp.com/attachments/976406861014257724/1209566650676944936/277545566_550707416266327_8340572757871327529_n.jpg?ex=65e763ba&is=65d4eeba&hm=af643a2daea1464d02225cd2f047a493afb3c7645735810c2bef39dc5141e8c4&"
+            src="https://res.cloudinary.com/ddrpwfpcj/image/upload/v1712645200/portfolio/llevoep6vmta7dnadsgz.jpg"
             title="Forest"
           ></Image>
           <Image
             scroll={scrollOut}
             link="https://www.instagram.com/p/CcY_ji_sfx7/"
-            src="https://cdn.discordapp.com/attachments/976406861014257724/1209567355768799292/278410238_484622986679972_2098150442088305132_n.jpg?ex=65e76462&is=65d4ef62&hm=20a4b070af83693722eb39e59b0ee88103a44485fccb2f663a26406fd3b2c951&"
+            src="https://res.cloudinary.com/ddrpwfpcj/image/upload/v1712645200/portfolio/ofbrkbp1ryle0m631gea.jpg"
             title="Room"
           ></Image>
         </motion.div>
